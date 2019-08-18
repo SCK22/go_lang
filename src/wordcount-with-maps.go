@@ -22,7 +22,6 @@ func WordCount(s string) map[string]int {
 	return m
 	// return map[string]int{"x": 1}
 }
-
 func main() {
 	// fmt.Println(WordCount("hello asd asd asd"))
 	wc.Test(WordCount)
