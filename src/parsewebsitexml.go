@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/xml"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 )
@@ -20,12 +19,12 @@ type News struct {
 func main() {
 	var s Sitemapindex
 	var n News
-	resp, _ := http.Get("https://www.washingtonpost.com/news-sitemaps/index.xml")
+	resp, _ := http.Get("https://www.washingtonpost.com/news-sitemap-index.xml")
 	bytes, _ := ioutil.ReadAll(resp.Body)
 	xml.Unmarshal(bytes, &s)
+	// news_map := make(map[string] News)
 
 	for _, Location := range s.Locations {
-		fmt.Println("Location", Location)
 		resp, _ := http.Get(Location)
 		bytes, _ := ioutil.ReadAll(resp.Body)
 		xml.Unmarshal(bytes, &n)
