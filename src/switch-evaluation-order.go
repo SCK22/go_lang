@@ -11,6 +11,7 @@ func main() {
 	// fmt.Print(reflect.TypeOf(today))
 	fmt.Printf("Today : %s \n", today)
 	fmt.Println("When's Saturday?")
+	fmt.Println(time.Saturday)
 	switch time.Saturday {
 	case today + 0:
 		fmt.Println("Today.")
