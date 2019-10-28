@@ -9,7 +9,7 @@ package main
 import "fmt"
 
 func main() {
-	defer fmt.Println("World")
+	defer fmt.Println("and this later!")
 
-	fmt.Println("hello")
+	fmt.Println("This runs first!")
 }
