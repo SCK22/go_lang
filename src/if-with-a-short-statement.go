@@ -1,4 +1,4 @@
-// you can initialize, copmute and check for a condition all in one line with the if statement
+// you can initialize, compute and check for a condition all in one line with the if statement
 
 package main
 
